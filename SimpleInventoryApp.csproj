@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0264A78E-BAEB-4491-A6B3-76B8A9E002C0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimpleInventoryApp</RootNamespace>
+    <AssemblyName>SimpleInventoryApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Base\Instance.cs" />
+    <Compile Include="Models\Base\StringCollection.cs" />
+    <Compile Include="Models\Standard\CategoryCollection.cs" />
+    <Compile Include="Models\Standard\CategoryInstance.cs" />
+    <Compile Include="Models\Standard\CustomAttributes.cs" />
+    <Compile Include="Models\Standard\ProductInstance.cs" />
+    <Compile Include="Utilities\Attributes\PropertyTableAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tables\Category\Instances.CategoryAttributes.sql" />
+    <Content Include="Tables\Category\Instances.Categories.sql" />
+    <Content Include="Tables\Category\Instances.CategoryCategories.sql" />
+    <Content Include="Tables\ProductItem\Instances.ProductAttributes.sql" />
+    <Content Include="Tables\ProductItem\Instances.ProductCategories.sql" />
+    <Content Include="Tables\ProductItem\Instances.Products.sql" />
+    <Content Include="Tables\UDTT\dbo.IntegerList.sql" />
+    <Content Include="Tables\UDTT\dbo.CustomAttributeList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
