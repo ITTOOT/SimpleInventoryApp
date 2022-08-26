@@ -43,6 +43,7 @@
     <Compile Include="Models\Standard\CategoryInstance.cs" />
     <Compile Include="Models\Standard\CustomAttributes.cs" />
     <Compile Include="Models\Standard\ProductInstance.cs" />
+    <Compile Include="Services\IInterfaces\IInstanceRepository.cs" />
     <Compile Include="Utilities\Attributes\PropertyTableAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,8 +65,6 @@
     <Content Include="Tables\UDTT\dbo.IntegerList.sql" />
     <Content Include="Tables\UDTT\dbo.CustomAttributeList.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Dapper.Contrib.Extensions;
 
 using SimpleInventoryApp.Models.Standard;
+using SimpleInventoryApp.Utilities.Attributes;
 
 namespace SimpleInventoryApp.Models.Base
 {
