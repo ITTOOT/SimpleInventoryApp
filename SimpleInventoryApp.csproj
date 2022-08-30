@@ -45,6 +45,15 @@
     <Compile Include="Models\Standard\ProductInstance.cs" />
     <Compile Include="Services\IInterfaces\IInstanceRepository.cs" />
     <Compile Include="Utilities\Attributes\PropertyTableAttribute.cs" />
+    <Compile Include="Utilities\SQL\Helpers\SqlMapperInitializer.cs" />
+    <Compile Include="Utilities\SQL\Queries\JoinTables.cs" />
+    <Compile Include="Utilities\SQL\Queries\KeyValuePivotTable.cs" />
+    <Compile Include="Utilities\SQL\Queries\SqlServerInstanceRepository.ExactMatch.cs" />
+    <Compile Include="Utilities\SQL\Queries\WhereClause.cs" />
+    <Compile Include="Utilities\SQL\Services\InstanceSqlServerExecutor.cs" />
+    <Compile Include="Utilities\SQL\Services\ISqlExecutor.cs" />
+    <Compile Include="Utilities\SQL\Helpers\InstanceReader.cs" />
+    <Compile Include="Utilities\SQL\Services\SqlServerInstanceRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -65,6 +74,8 @@
     <Content Include="Tables\UDTT\dbo.IntegerList.sql" />
     <Content Include="Tables\UDTT\dbo.CustomAttributeList.sql" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Utilities\SQL\StoredProcedures\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
