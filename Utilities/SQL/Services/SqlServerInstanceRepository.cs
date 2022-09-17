@@ -36,7 +36,8 @@ namespace SimpleInventoryApp.Utilities.SQL.Services
             });
         }
 
-        // SELECT all IDs in the array, Bulk retrieve instances from the system - easier to go from multiples to one.
+        // SELECT all IDs in the array
+        // , Bulk retrieve instances from the system - easier to go from multiples to one.
         public virtual Task<IEnumerable<TInstance>> GetAsync(params int[] instanceIds) => 
                             _Executor.Filter( $@"SELECT [Value] FROM @InstanceIds;",
                                 new { instanceIds = new InstanceCollection(instanceIds).ToSqlParameter() });
