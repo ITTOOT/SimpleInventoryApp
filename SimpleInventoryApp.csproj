@@ -71,6 +71,7 @@
     <Content Include="Tables\ProductItem\Instances.ProductAttributes.sql" />
     <Content Include="Tables\ProductItem\Instances.ProductCategories.sql" />
     <Content Include="Tables\ProductItem\Instances.Products.sql" />
+    <Content Include="Tables\TableInfo.txt" />
     <Content Include="Tables\UDTT\dbo.IntegerList.sql" />
     <Content Include="Tables\UDTT\dbo.CustomAttributeList.sql" />
   </ItemGroup>

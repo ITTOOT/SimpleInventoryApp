@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleInventoryApp.Models.Standard
 {
-    // To ,be inventoried and tracked with "tags" associated with custom attributes
+    //Items can belong to a single catagory or many...
+    //...categories can also belong to a category
     public record class CategoryInstance
     {
         // category acts as a “tag” for any entity to the system.

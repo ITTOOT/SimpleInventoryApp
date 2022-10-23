@@ -8,9 +8,10 @@ namespace SimpleInventoryApp.Models.Standard
 {
     public class CustomAttributes : Dictionary<string, string>
     {
+        //Inherits from base indicated at above class
         public CustomAttributes() : base() { }
         public CustomAttributes(IDictionary<string, string> values) : base(values) { }
     }
 
-    // IEquatable and Equals / GetHasCode()
+    //Helpers and overrides not implimented yet.
 }

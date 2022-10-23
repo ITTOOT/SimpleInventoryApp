@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SimpleInventoryApp.Models.Base;
+using SimpleInventoryApp.Models.Standard;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +9,10 @@ using System.Threading.Tasks;
 namespace SimpleInventoryApp.Services.IInterfaces
 {
     // Interface
-    public interface IInstanceRepository<IInstance>
-        where IInstance : Instance
+    public interface IInstanceRepository<TInstance>
+        where TInstance : Instance
     {
+        //Add required CRUD methods here
         Task<int> AddAsync(Task instance);
         Task<IEnumerable<TInstance>> GetAsync(params int[] instanceIds);
         Task<IEnumerable<TInstance>> FindAsync(ExactMatchQuery query);

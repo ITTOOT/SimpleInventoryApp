@@ -1,0 +1,20 @@
+﻿Each entity (model) requires a set of tables;
+	Instance
+	Category
+	Attributes
+
+Create using SQL statements.
+
+Category & Attributes tables = standard link tables where each category 
+can have many other categories and many custom attributes.
+
+Catergory names are UNIQUE.
+
+Product names are not required to be UNIQUE.
+
+SQL Server will reject categories if you try to create one with a previously used name.
+
+UDTT - Allows for users to upload data to CategoryCollection & CustomAttributes
+
+
+

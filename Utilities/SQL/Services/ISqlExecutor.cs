@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleInventoryApp.Models.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimpleInventoryApp.Utilities.SQL.Executor
 {
-    // ISqlExecutor
+    // ISqlExecutor - Interface
     public interface ISqlExecutor<TInstance> : ISqlExecutor
         where TInstance : Instance
     {

@@ -25,5 +25,5 @@ namespace SimpleInventoryApp.Models.Standard
         public int CategoryId { get; set; }
     }
 
-    // IEquatable and Equals / GetHasCode()
+    //Checks - IEquatable and Equals/GetHasCode()
 }
